@@ -24,10 +24,23 @@ document.querySelector(".control-buttons span").onclick = function () {
 
 };
 
-let duration = 100;
+// Effect Duration 
+let duration = 1000;
 
+// Select Blocks Container
 let blocksContainer = document.querySelector(".memory-game-blocks");
 
+// Create Array From Game Blocks 
 let blocks = Array.from(blocksContainer.children);
 
-let orderRange = [...Array(blocks.length).keys()];
+// // Create Range Of Keys
+// let orderRange = [...Array(blocks.length).keys()];
+let orderRange = Array.from(Array(blocks.length).keys());
+
+
+// Add Order Css Property To Game Blocks
+blocks.forEach((block, index) => {
+
+    block.style.order = orderRange[index];
+
+});

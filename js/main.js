@@ -101,7 +101,10 @@ function CheckMatchedBlocks(firstBlock, secondBlock) {
         secondBlock.classList.remove('is-flipped');
 
         firstBlock.classList.add('has-match');
-        secondBlock.classList.add('has-match')
+        secondBlock.classList.add('has-match');
+
+        document.getElementById('success').play();
+
     } else {
 
         triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
@@ -113,10 +116,11 @@ function CheckMatchedBlocks(firstBlock, secondBlock) {
 
         }, duration);
 
+        document.getElementById('fail').play();
+
     }
 
 };
-
 
 // Shuffle Function
 

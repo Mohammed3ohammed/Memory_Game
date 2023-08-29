@@ -2,6 +2,7 @@
 
 document.querySelector(".control-buttons span").onclick = function () {
 
+    document.getElementById('welcom').play();
     // Prompt Window To Ask For Name
     let yourName = prompt("What Your Name?");
 

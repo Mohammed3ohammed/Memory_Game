@@ -57,6 +57,10 @@ body {
   margin: 20px auto;
 }
 
+.memory-game-blocks.no-clicking {
+  pointer-events: none;
+}
+
 .memory-game-blocks .game-block {
   height: 200px;
   transition: transform 0.5s;

@@ -44,7 +44,51 @@ blocks.forEach((block, index) => {
 
     block.style.order = orderRange[index];
 
+    // Add Click Event
+
+    block.addEventListener('click', function () {
+
+        // Trigger The Flip Block Function
+        flipBlock(block);
+    });
+
 });
+
+// Flip Block Function 
+function flipBlock(selectedBlock) {
+    // Add Class is-flipped
+    selectedBlock.classList.add('is-flipped');
+
+    // Collect All Flipped Cards
+    let allFlippedBlocks = blocks.filter(flippedBlock => flippedBlock.classList.contains('is-flipped'));
+
+    // If Theres Two Selected Blocks 
+    if (allFlippedBlocks.length == 2) {
+
+        // Stop Clicking Function
+
+        stopClicking();
+
+        // Check Matched Block Function 
+
+    }
+}
+
+// Stop Clicking Function 
+
+function stopClicking() {
+
+    // Add Class No Clicking on Main Container
+    blocksContainer.classList.add('no-clicking');
+
+    setTimeout(() => {
+
+        // Remove Class No Clicking After The Duration
+        blocksContainer.classList.remove('no-clicking');
+
+    }, duration);
+}
+
 
 // Shuffle Function
 

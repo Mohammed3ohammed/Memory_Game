@@ -153,3 +153,10 @@ function shuffle(array) {
     return array;
 
 }
+
+// Reload Button The Window
+
+document.getElementById("reload").addEventListener("click", function () {
+    location.reload();
+});
+

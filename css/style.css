@@ -3,6 +3,7 @@
 }
 body {
   font-family: Arial, Tahoma, sans-serif;
+  background-color: #333;
 }
 
 .control-buttons {
@@ -32,7 +33,8 @@ body {
 .info-container {
   width: 1080px;
   margin: 20px auto 0;
-  background-color: #f6f6f6;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
   font-size: 24px;
   overflow: hidden;
@@ -109,4 +111,21 @@ body {
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
   pointer-events: none;
+}
+
+#reload {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
 }
